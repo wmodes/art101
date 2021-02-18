@@ -152,6 +152,9 @@ myInput.addEventListener("focus", function() {
 //   return str;
 // }
 //
+//
+// THIS IS THE ONE WE DID IN CLASS
+//
 // // attach click handler to submit button
 // $("#button").click(function(){
 //   // get the value in the #input text box, asign to a varaiable name
@@ -165,6 +168,4 @@ myInput.addEventListener("focus", function() {
 //   console.log(house);
 //   // add house to output div
 //   $("#output").html("<h1>" + house + "</h1>");
-//   $("#output").removeClass("hidden");
-//   $("#tail-box").removeClass("hidden");
 // })
