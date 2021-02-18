@@ -1,0 +1,102 @@
+
+
+/* Comments in CSS files look like this */
+
+/* CSS file for index.html */
+
+/* General CSS formatting */
+
+html, body {
+  font-family: Verdana,sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  /* colors can be specified by name, or by "hex value" */
+  color: #404040;
+  background-color: #efebdc;
+}
+
+/*h1, h2, h3 {*/
+  /* We provide a fallback font-family in case Verdana is not found on a user's system */
+  /*font-family: Verdana, sans-serif;*/
+  /*color: #000000;*/
+  /*text-transform: uppercase;*/
+  /* sets the top, right, bottom, and left padding to 0 */
+  /*padding: 0;*/
+  /* we can specify a particular margin */
+  /*margin-bottom: 5px;*/
+/*}*/
+
+a {
+  /* turns off underlining links */
+  text-decoration: none;
+  text-transform: uppercase;
+  /* same as #808080 */
+  color: #888;
+  font-weight: bold;
+  /* set font-size at 90% of default */
+  font-size: 90%;
+}
+
+.reveal {
+  /*width:100%;
+  text-align: right;*/
+  float: right;
+  position: relative;
+  top: -15px;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 75%;
+}
+
+/* Biographical style elements */
+
+/* when an element is referenced by class, it starts with a dot */
+.major-section {
+  /* a shortcut to set three different border propoerties */
+  border: solid 1px #888;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  /* the following CSS is a shortcut for the previous three lines */
+  padding: auto 20px 10px 20px;
+  width: 95%;
+  margin: 20px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+/* when an element is referenced by id, it starts with a #-sign */
+#headshot {
+  float: right;
+  /* if we don't specify which margin, it applies to top, bottom, left, & right */
+  margin: 10px; 
+}
+
+#headshot img {
+  /* units can be specified in pixels */
+  width: 400px;
+  /* units can be specified in percentage */
+  /*max-width: 50%;*/
+}
+
+#title {
+  font-weight: bold;
+  font-size: 120%;
+  color: #404040;
+  margin-bottom: 5px;
+}
+
+.education {
+  margin-bottom: 5px;
+}
+
+.interests {
+}
+
+/* Assignment style elements */
+
+/* We can specify nested elements in CSS to select the one we want */
+.assignments li a {
+  color: #606060;
+}

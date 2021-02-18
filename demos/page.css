@@ -1,0 +1,23 @@
+/* Page CSS 
+ * 
+ * I was tired of copying my CSS file each week, so I put all the general CSS
+ * stuff in one file and called it site.css and put it in my home directory. 
+ * In this file, I have any specific styling for a homework assignment in this 
+ * file, page.css in my homework directory.
+ * 
+ * You'll notice that we can include more than one css file at the top of an html
+ * file:
+ *
+ *  <link rel="stylesheet" type="text/css" href="../site.css">
+ *  <link rel="stylesheet" type="text/css" href="page.css">
+ */
+
+/* Specific CSS formatting for this page */
+
+#js-output {
+    -webkit-column-count: 6; /* Chrome, Safari, Opera */
+    -moz-column-count: 6; /* Firefox */
+    column-count: 6;
+}
+
+

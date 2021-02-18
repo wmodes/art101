@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Sketch&display=swap');
+
+body {
+    font-family: Helvetica, Verdana, Arial, "san serif";
+    background-color: tan;
+    padding: 25px;
+    font-size: 120%;
+}
+
+#content {
+    padding: 50px;
+    background-color: PapayaWhip;
+    border: solid 1px #333333;
+    min-height: 80vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Londrina Sketch', cursive;
+    font-weight: bold;
+    margin: 0;
+}
+
+h1 {font-size: 40px;}
+h2 {font-size: 34px;}
+h3 {font-size: 24px;}
+h4 {font-size: 18px;}
+
+figure {
+    display: inline-block;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 80%;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: maroon;
+}
+a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+.linkbox {
+    padding: 10px;
+    font-size: 80%;
+}
+.homelink {
+    text-align: left;
+}
+.sourcelink {
+    float: right;
+}
+
+#output {
+    /*font-size: 150%;
+    font-weight: bold;*/
+}
+
+.input-output {
+    border: solid 1px #333333;
+    padding: 10px 10px 30px;
+}
+
+.credits {
+    font-size: 60%;
+    color: gray;
+}
+.credits a {
+    text-decoration: inherit;
+    color: inherit;
+}

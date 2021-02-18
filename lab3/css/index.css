@@ -1,0 +1,17 @@
+
+
+/* 
+	Note that I created a site.css in my art101/css folder to apply to
+	all the pages in my site.
+*/
+
+
+.big-idea {
+	font-size: 110%;
+	color: maroon;
+}
+
+.results img {
+	width: 800px;
+	height: auto;
+}
