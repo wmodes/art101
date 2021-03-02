@@ -4,7 +4,8 @@
  * License: Public Domain
  */
 
-apiEndpoint = "https://api.chucknorris.io/jokes/random";
+//apiEndpoint = "https://api.chucknorris.io/jokes/random";
+apiEndpoint = "https://xkcd.com/info.0.json"
 
 $("#api-button").click(doAPIStuff);
 
@@ -27,8 +28,13 @@ function doAPIStuff() {
   // If the request succeeds
   .done(function( data ) {
     var textData = JSON.stringify(data);
+    var str = "";
+    var imageURL = data.img;
+    var title = data.title;
+    str += "<h2>" + title + "</h1>";
+    str += "<img src='" + imageURL + "'>"
     console.log("Success:", textData);
-    putTextOnPage(textData);
+    putTextOnPage(str);
   })
   // If the request fails
   .fail(function( xhr, status, errorThrown ) {
