@@ -36,7 +36,7 @@ function outputToPage(str) {
 
 // given a number and an object that looks like this:
 //      {3: "Fizz", 5: "Buzz", 7: "Boom"}
-// loops over the numbers and outputs the number and the matching text 
+// loops over the numbers and outputs the number and the matching text
 // for factors
 function fizzBuzzBoom(maxNums, factorObj) {
     // iterate over all of out numbers
