@@ -1,4 +1,4 @@
 #output {
   border: solid 1px red;
-  height: 100px;
+  min-height: 100px;
 }

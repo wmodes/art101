@@ -4,6 +4,8 @@
  * License: Public Domain
  */
 
+apiEndpoint = "https://api.chucknorris.io/jokes/random";
+
 $("#api-button").click(doAPIStuff);
 
 function putTextOnPage(text){
@@ -14,7 +16,7 @@ function doAPIStuff() {
   console.log("Doing API Stuff");
   $.ajax({
     // The URL for the request
-    url: "http://numbersapi.com/42",
+    url: apiEndpoint,
     // The data to send (will be converted to a query string)
     data: { },
     // Whether this is a POST or GET request
@@ -24,8 +26,9 @@ function doAPIStuff() {
   })
   // If the request succeeds
   .done(function( data ) {
-    console.log("Success:", data);
-    putTextOnPage(data);
+    var textData = JSON.stringify(data);
+    console.log("Success:", textData);
+    putTextOnPage(textData);
   })
   // If the request fails
   .fail(function( xhr, status, errorThrown ) {
