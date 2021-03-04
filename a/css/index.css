@@ -1,0 +1,30 @@
+
+
+.code-link {
+    text-align: right;
+    font-size: 60%;
+}
+
+.namebadge {
+    float: right;
+    width: 500px;
+}
+.namebadge img {
+    width: 100%;
+    height: auto;
+}
+
+#name-results {
+    position: absolute;
+    top: 210px;
+    right: 80px;
+    width: 450px;
+    /*border: solid 1px black;*/
+    word-wrap: break-word;
+    font-size: 350%;
+    line-height: 90%;
+    font-weight: bold;
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    margin: 20px;
+}
