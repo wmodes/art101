@@ -23,3 +23,11 @@ img.bio-photo {
 	float: right;
 	padding: 20px;
 }
+
+#photo1 {
+    filter: invert(1);
+}
+
+.photo {
+	max-width: 250px;
+}
