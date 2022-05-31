@@ -29,6 +29,7 @@ function fizzBuzz() {
     } else {
       str += "!";
     }
+    debugger;
     $("#output").append("<p>" + str + "</p>")
   }
 }
