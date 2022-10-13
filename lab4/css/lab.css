@@ -1,0 +1,9 @@
+
+/* Other css directives are in sitewide css */
+
+#right-img {
+    float: right;
+    width: 300px;
+    height: auto;
+    border: solid 1px black;
+}
