@@ -4,36 +4,6 @@
  * License: Public Domain
  */
 
-/* better */
-
-// // https://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
-// String.prototype.shuffle = function () {
-//     var a = this.split(""),
-//         n = a.length;
-//     for(var i = n - 1; i > 0; i--) {
-//         var j = Math.floor(Math.random() * (i + 1));
-//         var tmp = a[i];
-//         a[i] = a[j];
-//         a[j] = tmp;
-//     }
-//     return a.join("");
-// }
-//
-// // https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-// function toTitleCase(str) {
-//   return str.replace(
-//     /\w\S*/g,
-//     function(txt) {
-//       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-//     }
-//   );
-// }
-//
-// toTitleCase(str.toLowerCase().shuffle().trim().replace("  ", " "))
-
-
-
-
 // shuffleArray - take an array and shuffle the contents
 // Thanks to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
@@ -67,20 +37,7 @@ function toTitleCase(str) {
 // sortUserName - a function that takes user input and sorts the letters
 // of their name
 function sortUserName(userName) {
-    // // convert to lower case
-    // userName = userName.toLowerCase();
-    // console.log("userName =", userName);
-    // // split string to array
-    // var nameArray = userName.split('');
-    // console.log("nameArray =", nameArray);
-    // // sort the array
-    // var nameArraySort = nameArray.sort();
-    // console.log("nameArraySort =", nameArraySort);
-    // // join array back to a string
-    // var nameSorted = nameArraySort.join('');
-    // console.log("nameSorted =", nameSorted);
-    // // Note that I could have done the above lines as a single line:
-    // //   userName.toLowerCase().split("").sort().join("")
+
     return userName.toLowerCase().split("").sort().join("");
 }
 
