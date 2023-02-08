@@ -1,0 +1,52 @@
+/* Page CSS 
+ * 
+ * I was tired of copying my CSS file each week, so I put all the general CSS
+ * stuff in one file and called it site.css and put it in my home directory. 
+ * In this file, I have any specific styling for a homework assignment in this 
+ * file, page.css in my homework directory.
+ * 
+ * You'll notice that we can include more than one css file at the top of an html
+ * file:
+ *
+ *  <link rel="stylesheet" type="text/css" href="../site.css">
+ *  <link rel="stylesheet" type="text/css" href="page.css">
+ */
+
+/* Specific CSS formatting for this page */
+
+pre.prettyprint {
+    border: 0 !important;
+}
+
+#js-output {
+    -webkit-column-count: 6; /* Chrome, Safari, Opera */
+    -moz-column-count: 6; /* Firefox */
+    column-count: 6;
+}
+
+#output {
+	width: 500px;
+}
+
+#output .item {
+	padding-left: 1.75em ;
+	text-indent: -1.75em ;
+	font-family: "courier new", monospace;
+    text-transform: uppercase;
+	font-weight: bold;
+	border-bottom: solid 1px #888;
+}
+
+#output .item del {
+	color: #aaa;
+}
+
+#output .delete-item {
+    color: red;
+    font-weight: bold;
+    /* position: absolute; */
+    /* right: 0px; */
+    padding-left: 20px;
+    float: right;
+}
+
