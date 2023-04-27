@@ -7,13 +7,13 @@
 console.log("We got this far, yo");
 
 // Define Variables
-make = "Ford";
-model = "Taurus";
-color = "Rusty";
-year = 1995;
+var make = "Ford";
+var model = "Taurus";
+var color = "Rusty";
+var year = 1995;
 
 // calculate
-age = 2022 - year;
+var age = 2022 - year;
 
 // output
 document.writeln("Make: " + make + "<br>");
