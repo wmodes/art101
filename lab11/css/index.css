@@ -10,3 +10,79 @@
   background-color: #fdf7ed;
   border: solid 1px maroon;
 }
+
+button.highlight-button {
+  font-size: 80%;
+}    
+
+/* Here are the new rules for the party mode  */
+
+body.party {
+  background-color: #ffccff;
+}
+
+/* create a red marching ants border */
+body.party .sectionbox {
+  background-color: #ffee00;
+  border: dotted 5px red;
+  animation: marching-ants 2s infinite linear;
+}
+
+/* animate the marching ants border */
+@keyframes marching-ants {
+  0% {
+    border-width: 5px;
+  }
+  50% {
+    border-width: 10px;
+  }
+  100% {
+    border-width: 5px;
+  }
+}
+
+body.party .special {
+  background-color: #ccffff;
+} 
+
+body.party button.highlight-button {
+  background-color: #ccffcd;
+  border: solid 1px #1900ff;
+  color: #1900ff;
+}
+
+body.party h1 {
+  color: papayawhip;
+}
+
+body.party h2 {
+  color: #1900ff;
+}
+
+/* create a red, dotted, 30px border */
+body.party #content {
+  background-color: #1900ff;
+  outline: dotted 30px red;
+  outline-offset: -15px;
+  animation: border 2s infinite linear;
+}
+
+/* animate the border so it shrinks to 0px and grows bacck to 30px
+   maintaining an offset of half its width */
+@keyframes border {
+  0% {
+    outline-width: 30px;
+    outline-offset: -15px;
+  }
+  50% {
+    outline-width: 50px;
+    outline-offset: -25px;
+  }
+  100% {
+    outline-width: 30px;
+    outline-offset: -15px;
+  }
+}
+```
+
+
