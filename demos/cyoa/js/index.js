@@ -36,68 +36,27 @@ rooms = {
     },
     cu2: {
         name: "Classroom Unit Two",
-        description: "This is the lecture hall next door to your class. Weirdly, in your three \
-            years at UCSC, you've never had a class in here. It seems this class has already started. \
-            You recognize the lecturer from somewhere. A magazine? A newspaper? \
-            The students who are about two-thirds young women, some with their hair shaved \
-            listen raptly to the teacher's excited lecture.<br><br>\
-            \"Today we are going to hear from some of the notorious, humorless,\
-            man-hating second wave feminists.\" she laughs, \
-            \"And you ladies (and men) having grown up taking for granted the fruits of their \
-            efforts are going to find that you owe them a huge intellectual debt. \
-            And that, to the contrary, they are far from humorless and \
-            were, in fact, some of the original culture jammers.\"",
+        description: "This is the lecture hall next door to your class. Weirdly, in your three years at school, you've never had a class in here. Looking in you see why: It is huge. It could easily fit 400 students. Your Queer Musicology major doesn't ever have very large classes. It seems this class has already started. You recognize the lecturer from somewhere. A magazine? A newspaper? The students who are about two-thirds young women, some with their hair shaved listen raptly to the teacher's excited lecture.<br><br>\"Today we are going to hear from some of the notorious, humorless, man-hating second wave feminists.\" she laughs, \"And you ladies (and men.. and others) having grown up taking for granted the fruits of their efforts are going to find that you owe them a huge intellectual debt. And that, to the contrary, they are far from humorless and were, in fact, some of the original culture jammers.\"",
         exitKeys: ['foyer', 'cu2listen1'],
         exitTexts: ["Go back to the foyer.",
             "Sit down for a minute and listen"]
     },
     cu2listen1: {
         name: "Classroom Unit Two",
-        description: "The lecturer is giving a brief and bracing history on Feminist Theory.\
-            She has a slide of a book cover by Valerie Solanas. The professor says \
-            \"SCUM stands for the \'Society for Cutting Up Men\'. So you can kind of see \
-            where she is coming from. [The class laughs.]\
-            The book epitomizes everything you think when you hear the word \"manifesto\": outrageous, \
-            incendiary, and a demand for action. It calls for women to -- and I quote -- \
-            overthrow the government, eliminate the money system, institute complete automation \
-            and eliminate the male sex. Exciting, if a bit impractical. And perhaps a good start. \
-            [The audience laughs again.] \
-            But seriously, she's shooting over the top to make a point. She's giving women \
-            inspiration to dream much bigger than the dreams offered them in 1967 and putting \
-            men on notice.\" She pauses and flips to the next slide.<br><br>\
-            \"Now obviously there's enough to say about any one of these books to fill \
-            an entire lecture if not an entire class, but we're giving you the super \
-            abbreviated version so we can catch you up to contemporary feminism.\"",
+        description: "The lecturer is giving a brief and bracing history on Feminist Theory. She has a slide of a book cover by Valerie Solanas. The professor says \"SCUM stands for the \'Society for Cutting Up Men\'. So you can kind of see where she is coming from. [The class laughs.] The book epitomizes everything you think when you hear the word \'manifesto\': outrageous, incendiary, and a demand for action. It calls for women to -- and I quote -- overthrow the government, eliminate the money system, institute complete automation and eliminate the male sex. Exciting, if a bit impractical. And perhaps a good start. [The audience laughs again.] But seriously, she's shooting over the top to make a point. She's giving women inspiration to dream much bigger than the dreams offered them in 1967 and putting men on notice.\" She pauses and flips to the next slide.<br><br>\"Now obviously there's enough to say about any one of these books to fill an entire lecture if not an entire class, but we're giving you the super abbreviated version so we can catch you up to contemporary feminism.\"",
         exitKeys: ['foyer', 'cu2listen2'],
         exitTexts: ["Quietly head back to the foyer.",
             "Listen some more."]
     },
     cu2listen2: {
         name: "Classroom Unit Two",
-        description: "\"Okay, this book,\" the professor gestures at a photo of a book\
-            titled <i>Sexual Politics</i>, \" came out in 1970. Millett argues for the first\
-            time that sex is political and that furthermore patriarchy plays a role in \
-            sexual relations. This is new stuff here. She's not only pulling sex out\
-            of the bedroom, but also challenging political aspects of it. Better yet, she takes \
-            on classic canonical male writers such as \
-            D. H. Lawrence, Henry Miller, and Norman Mailer.\
-            Millett argues that these authors view and discuss sex in a patriarchal and \
-            sexist way. Sexual Politics was largely influenced by Simone De Beauvoir's 1949 book \
-            The Second Sex, although De Beauvoir's text is known for being more \
-            intellectual and less exciting than Millett's text. <br><br>\
-            \"She also takes on Sigmund Freud who deserves it. [Laughs.] \
-            Though in fairness, later critics\
-            (mostly non-feminist) have said Millett misreads Freud. \
-            But then. That's what they always say.\" The class laughs harder.\
-            You realize that if you stay here any longer you are going to miss your own class,\
-            though you have a pang of regret that you didn't take this class instead.",
+        description: "\"Okay, this book,\" the professor gestures at a photo of a book titled <i>Sexual Politics</i>, \" came out in 1970. Millett argues for the first time that sex is political and that furthermore patriarchy plays a role in sexual relations. This is new stuff here. She's not only pulling sex out of the bedroom, but also challenging political aspects of it. Better yet, she takes on classic canonical male writers such as D. H. Lawrence, Henry Miller, and Norman Mailer. Millett argues that these authors view and discuss sex in a patriarchal and sexist way. Sexual Politics was largely influenced by Simone De Beauvoir's 1949 book <i>The Second Sex</i>, although De Beauvoir's text is known for being more intellectual and less exciting than Millett's text. <br><br>\"She also takes on Sigmund Freud who deserves it. [Laughs.] Though in fairness, later critics (mostly non-feminist) have said Millett misreads Freud. But then. That's what they always say.\" The class laughs harder. You realize that if you stay here any longer you are going to miss your own class, though you have a pang of regret that you didn't take this class instead.",
         exitKeys: ['foyer'],
         exitTexts: ["Sneak back to the foyer."]
     },
     forest1: {
         name: "Entrance to Forest Path",
-        description: "Just out the back door of Classroom Unit One, paths lead into the inviting \
-            woods. Or you can go back to the lecture hall and wait for the class to start.",
+        description: "Just out the back door of Classroom Unit One, paths lead into the inviting woods. Or you can go back to the lecture hall and wait for the class to start.",
         exitKeys: ['cu1', 'forest2'],
         exitTexts: ["Go back into your classroom.",
             "Follow the forest path."]
