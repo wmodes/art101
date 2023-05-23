@@ -5,14 +5,24 @@
 rooms = {
     cu1: {
         name: "Classroom Unit One",
-        description: "This is a large lecture room that holds maybe a couple hundred people. \
-            Half of the seats are filled by laconic students who are all looking at their phones and \
-            laptops. The lecturer hasn't arrived yet, so maybe you are still early for class. Perhaps \
-            there is still time to get a cup of coffee at the cafe. You'll need that too, if you want \
-            to survive your Astronomy 101 lecture.",
-        exitKeys: ['foyer', 'forest1'],
-        exitTexts: ["Go out the front of the lecture hall",
-            "Slip out the back door."]
+        description: "This is a large lecture room that holds maybe a couple hundred people. Half of the seats are filled by laconic students who are all looking at their phones and laptops. The lecturer hasn't arrived yet, so maybe you are still early for class. Perhaps there is still time to get a cup of coffee at the cafe. You'll need that too, if you want to survive your Astronomy 101 lecture.",
+        exitKeys: ['waiting', 'foyer', 'forest1'],
+        exitTexts: ["Wait for class to begin", "Go out the front of the lecture hall",
+            "Slip out the back door"],
+    },
+    waiting: {
+        name: "Bored in Astronomy Class",
+        description: "You sit in your seat, growing increasingly bored as you wait for the lecturer to arrive. The room is dimly lit, with the only source of light being the fluorescent lights above, and a tantilizing shaft of light from high inaccessible windows. You can hear birds chirping in the nearby forest inviting you to play. The air is filled with a mix of anticipation and lethargy as students shuffle in their seats, exchanging glances of shared boredom. The sound of tapping keyboards and occasional sighs fills the room, echoing off the walls. The clock on the wall ticks slowly, each passing second feeling like an eternity.",
+    exitKeys: ['preparation', 'foyer', 'forest1'],
+    exitTexts: ["Wait for class to begin", "Go out the front of the lecture hall",
+        "Slip out the back door"],
+    },
+    preparation: {
+        name: "Lecturer's Clumsy Preparation",
+        description: "The lecturer finally arrives, bustling around the front of the large stadium classroom. He fumbles with the control panel, trying to adjust the lights, but ends up dimming them too much, casting a shadowy ambiance over the room. With a loud screech, he turns the microphone on, causing a few students to cringe and cover their ears. He hastily adjusts the volume, and his voice booms through the speakers, momentarily startling everyone. The lecturer's comical struggle with technology adds a touch of amusement to the otherwise mundane atmosphere, providing some much-needed entertainment before the lecture begins.",
+        exitKeys: ['theend2', 'foyer', 'forest1'],
+        exitTexts: ["Settle in for the long haul", "Bravely march out the front door",
+            "Escape out the back"],
     },
     foyer: {
         name: "Foyer of Classroom Unit 1 & 2",
@@ -243,32 +253,19 @@ rooms = {
     },
     cu1again: { 
         name: "Classroom Unit One",
-        description: "This is a large lecture room that holds maybe a couple hundred people. \
-            Most of the seats are filled by laconic students who are all looking at their phones and \
-            laptops. The teacher is here now and in the midst of his Astronomy lecture. He is talking\
-            about black holes and general relativity and Stephen Hawking. <br><br>\
-            The moment you step in, he stops and pauses. \
-            All of the students look up from their devices to stare at you as if \
-            they've never been late in their lives. <br><br>\
-            The nearest seat is halfway up the lecture hall \
-            stairs and you feel like you are a complete spectacle. You juggle your backpack, your hot \
-            coffee, your books, and your laptop as you sit down. You manage to spill some of your \
-            coffee on your pants.<br><br>\
-            The teacher doesn't continue until you are completely settled.",
-        exitKeys: ['theend'],
+        description: "This is a large lecture room that holds maybe a couple hundred people. Most of the seats are filled by laconic students who are all looking at their phones and laptops. The teacher is here now and in the midst of his Astronomy lecture. He is talking about black holes and general relativity and Stephen Hawking. <br><br>The moment you step in, he stops and pauses. All of the students look up from their devices to stare at you as if they've never been late in their lives. <br><br>The nearest seat is halfway up the lecture hall stairs and you feel like you are a complete spectacle. You juggle your backpack, your hot coffee, your books, and your laptop as you sit down. You manage to spill some of your coffee on your pants.<br><br>The teacher doesn't continue until you are completely settled.",
+        exitKeys: ['theend1'],
         exitTexts: ["Settle in for a long long lecture."]
     },
-    theend: { 
+    theend1: { 
         name: "The End",
-        description: "As you expected, the lecturer manages to take the entirety of the cosmos,\
-            the universe, the billions of billions of starts and galaxies, the possibility \
-            of life on other planets, the mystery of time and space and black holes,\
-            and the origins of everything and render it mind-achingly dull. \
-            You stay awake through the class thanks \
-            to the coffee and to your next class and your final section.<br><br>\
-            Congratulations. You survived another day of your undergraduate education. \
-            Only another year and half to go, unless you chose to dodge Real Life another two \
-            to 8 years by going to grad school.",
+        description: "As you expected, the lecturer manages to take the entirety of the cosmos, the universe, the billions of billions of starts and galaxies, the possibility of life on other planets, the mystery of time and space and black holes, and the origins of everything and render it mind-achingly dull. You stay awake through the class thanks to the coffee and to your next class and your final section.<br><br>Congratulations. You survived another day of your undergraduate education. Only another year and half to go, unless you chose to dodge Real Life another 2 to 8 years by going to grad school.",
+        exitKeys: ['cu1'],
+        exitTexts: ["Start over!"]
+    },     
+    theend2: { 
+        name: "The End",
+        description: "As you expected, the lecturer manages to take the entirety of the cosmos, the universe, the billions of billions of starts and galaxies, the possibility of life on other planets, the mystery of time and space and black holes, and the origins of everything and render it mind-achingly dull. Because you didn't get coffee you inevitably fall asleep. You wake when you hear gentle laughter nearby and see glances directed your way. Were you obvious? Were you snoring? Did you drop something? Did the instructor make a comment? You are pretty sure you will just die here and now.<br><br>Despite it all, you survived another day of your undergraduate education. Congratulations. Only another year and half to go, unless you chose to dodge Real Life another 2 to 8 years by going to grad school.",
         exitKeys: ['cu1'],
         exitTexts: ["Start over!"]
     },     
@@ -277,22 +274,22 @@ rooms = {
 // global variables
 var currentRoom = 1;
 var lastRoom = 20;
-var outputHTMLid = "js-output"
+var outputHTMLid = "js-output";
 
 /*
     Print something on the webpage in display area
     Parameters: string to display
  */
 function display(string) {
-    var element = document.getElementById(outputHTMLid);
-    element.innerHTML = element.innerHTML + string;
+    var element = $("#" + outputHTMLid);
+    element.html(element.html() + string);
 }
 
 /*
  * Clear display area
  */
 function clearDisplayArea() {
-    document.getElementById(outputHTMLid).innerHTML = "";
+    $("#" + outputHTMLid).html("");
 }
 
 /*
@@ -311,11 +308,11 @@ function displayCurrentRoom(roomObj) {
 function displayCurrentExits(roomObj) {
     // loop over all the exitKeys for this room
     display("<p>Choose your next move:</p><ul class='exits'>");
-    for(i=0; i<roomObj.exitKeys.length; i++) {
+    for(i = 0; i < roomObj.exitKeys.length; i++) {
         /* We want the HTML to look like this:
               <li><a onClick='javascript:newRoom("exitKey")'>Exit text</a></li>
         */
-        exitHTML = "<li onClick='javascript:newRoom(\"" + 
+        exitHTML = "<li onClick='javascript:newRoom(\"" +
                 roomObj.exitKeys[i] + "\")'>" + roomObj.exitTexts[i] + "</li>";
         display(exitHTML);
     }
@@ -323,7 +320,7 @@ function displayCurrentExits(roomObj) {
 }
 
 function newRoom(nextRoom) {
-	currentRoom = nextRoom;
+    currentRoom = nextRoom;
     currentRoomObj = rooms[currentRoom];
     clearDisplayArea();
     displayCurrentRoom(currentRoomObj);
@@ -331,6 +328,6 @@ function newRoom(nextRoom) {
 }
 
 // we need to wait until the webpage is loaded before we display room 1
-document.addEventListener("DOMContentLoaded", function(event) { 
-  newRoom('cu1')
+$(document).ready(function() {
+    newRoom('cu1');
 });

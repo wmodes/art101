@@ -20,4 +20,6 @@
     column-count: 6;
 }
 
-
+ul li {
+    margin-bottom: 1em; /* Adjust the value as needed */
+}

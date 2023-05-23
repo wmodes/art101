@@ -17,7 +17,27 @@
 .adventure-section {
     min-height: 300px;
     color: maroon;
+    border: solid 1px #333333;
+    padding: 20px 20px 30px 20px;
+    margin: 10px;   
+    background-color: #fffdf3;  
+    width: 75%;
+    max-width: 100%;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+    .adventure-section {
+      width: 100%;
+      min-width: auto;
+      margin: 10px 0 10px 0;
+    }
+}   
+
 #js-output .title {
     font-weight: bold;
 }
