@@ -14,6 +14,11 @@
 
 /* Specific CSS formatting for this page */
 
+.room-image img {
+    width: 100%;
+    height: auto;
+}
+
 .adventure-section {
     min-height: 300px;
     color: maroon;
