@@ -26,8 +26,19 @@
     padding: 20px 20px 30px 20px;
     margin: 10px;   
     background-color: #fffdf3;  
-    width: 75%;
+    width: 80%;
     max-width: 100%;
+}
+
+.room-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-image img {
+    width: 80%;
+    border: solid 1px #333333;
 }
 
 .container {
@@ -40,6 +51,10 @@
       width: 100%;
       min-width: auto;
       margin: 10px 0 10px 0;
+    }
+
+    .room-image img {
+        width: 100%;
     }
 }   
 
