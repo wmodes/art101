@@ -111,8 +111,10 @@ const map = L.map('map').setView(mapCenter, mapZoom);
 
 // Set up the map filters
 let myFilter = [
-    'grayscale:95%',
-    'contrast:130%',
+    'grayscale:100%',
+    // 'contrast:90%',
+    'sepia:35%',
+    // 'brightness:110%',
 ];
 
 // Add the basemap tiles
