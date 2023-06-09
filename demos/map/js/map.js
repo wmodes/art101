@@ -111,7 +111,7 @@ const map = L.map('map').setView(mapCenter, mapZoom);
 
 // Set up the map filters
 let myFilter = [
-    'grayscale:90%',
+    'grayscale:95%',
     'contrast:130%',
 ];
 
