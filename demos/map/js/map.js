@@ -18,7 +18,7 @@ const placeDB = [
         name: "Cave Gulch Trailhead",
         location: [36.98782690384421, -122.06885071440965],
         description: "Take a walk through one of the Wilder Ranch meadows and down into the gulch to brave IXL/Hellhole cave.",
-        icon: "danger",
+        icon: "cave",
         image: "cave-gulch.jpg"
     },
     {
@@ -60,7 +60,7 @@ const placeDB = [
         name: "Trailer Park",
         location: [37.00132133537114, -122.06618061764895],
         description: "This off-the-beaten-path trailer park is a great place to see OG UCSC.",
-        icon: "trailer",
+        icon: "house",
         image: "trailerpark.jpg"
     },
     {
@@ -76,11 +76,31 @@ const placeDB = [
         description: "This beautiful redwood forest is a great place to go for a hike, have a picnic, or just enjoy the peace and quiet.",
         icon: "tree",
         image: "upper-campus.png"
+    },
+    {
+        name: "UCSC Gym & Pool",
+        location: [36.99465964089265, -122.05450508603172],
+        description: "The UCSC Gym & Pool is a great place to work out, swim, or take a yoga class. It's also a great place to relax and unwind.",
+        icon: "gym",
+        image: "gym-pool.jpg"
+    },
+    {
+        name: "Collidge Drive Lookout",
+        location: [36.99075333091118, -122.04900162807267],
+        description: "The Collidge Drive Lookout, aka Spliff Cliff, is a great place to get a panoramic view of Santa Cruz. It's also a great place to take a break from studying or working and just enjoy the scenery.",
+        icon: "lookout",    
+        image: "lookout.png"
+    },
+    {
+        name: "Disc Golf Course",
+        location: [36.9950107545421, -122.05223645024876],
+        description: "The Collidge Drive Lookout, aka Spliff Cliff, is a great place to get a panoramic view of Santa Cruz. It's also a great place to take a break from studying or working and just enjoy the scenery.",
+        icon: "disc-golf",    
+        image: "disc-golf.png"
     }
 ];
             
 const imgDir = "img/";
-const iconDir = "img/icons/";
 const mapCenter = [36.99809807995018, -122.05589273233338];
 const mapZoom = 15; // 1 = whole world, 10 = large city, 20 = city blocks
 const mapMaxZoom = 18;
@@ -88,17 +108,30 @@ const mapMinZoom = 13;
 
 // Set up the map
 const map = L.map('map').setView(mapCenter, mapZoom);
-const mapLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+// Set up the map filters
+let myFilter = [
+    'grayscale:90%',
+    'contrast:130%',
+];
+
+// Add the basemap tiles
+const mapLayer = L.tileLayer.colorFilter('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: mapMaxZoom,
-    minZoom: mapMinZoom
+    minZoom: mapMinZoom,
+    filter: myFilter
 }).addTo(map);
 
+const iconDir = "img/icons/";
 const iconSize = [48, 48];
 const iconAnchor = [16, 32];
 const popupAnchor = [0, -32];
 // all icons as pngs in img/icons
 // custom markers include:
-const iconNames = ['default', 'art', 'book', 'coffee', 'danger', 'sun', 'trailer', 'tree'];
+const iconNames = [];
+for (const place of placeDB) {
+  iconNames.push(place.icon);
+}
 // iterate over iconNames to create an object of L.icon objects
 const icons = {};
 iconNames.forEach(function(iconName) {
@@ -109,11 +142,6 @@ iconNames.forEach(function(iconName) {
         popupAnchor: popupAnchor
     });
 });
-
-// Set up the OSM layer
-L.tileLayer(
-    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {maxZoom: mapMaxZoom}).addTo(map);
 
 // Add markers for each place
 placeDB.forEach(function(place) {
