@@ -111,7 +111,7 @@ a {
  */
 
 div {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 } 
 
 .side-by-side {
@@ -119,6 +119,10 @@ div {
   flex-direction: row;
   /* flex-wrap: wrap; */
   justify-content: space-between;
+}
+
+.side-by-side>* {
+  padding:20px;
 }
 
 .photo-box {
