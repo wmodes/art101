@@ -105,3 +105,32 @@ a {
   column-width: 450px;
   list-style: none;
 }
+
+/*
+ * PHOTO
+ */
+
+div {
+  border: 2px solid red;
+} 
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+
+.photo-box {
+  flex-basis: 50%;
+  /* width: 45%; */
+}
+
+.photo-box img {
+  width: 100%;
+}
+
+.text-box {
+  flex-basis: 50%;
+  /* width: 45%; */
+}

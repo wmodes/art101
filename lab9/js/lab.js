@@ -1,39 +1,39 @@
-/*
- * Author: Wes Modes <wmodes@csumb.edu>
- * Created: 19 September
- * License: Public Domain
- */
+// Lab 10 - sort or scramble a name
+// Author: S Llawom Eydansele <wmodes@csumb.edu>
+// Created: February 18, someyear
+// License: Public Domain
 
- window.onload = function () {
+// Using jQuery, create buttons to add to the challenge, problems, and results sections of your document:
+// Find the section you want to add the button to
+// Create the button
+// Give it a text label
+// Add it to the section
+$(".sectionbox").append("<button class='btn btn-secondary highlight-button'>Toggle Highlight</button>");
 
-     // your script here
+// Add to your previous JavaScript file:
+// Using jQuery, do the following for each button:
+// Add a click event to each button
+// Find the challenge, problems, or results section the button is in.
+// Toggle a class special within the <div> of the section
+// Go into your css and style each of the classes
+// Test each button
+$(".highlight-button").click(function(){
+  // I can use "this" to refer to the button that got clicked
+  // here's a different maybe better way to do it
+  // (we are traversing the DOM to the parent)
+  $(this).parent().toggleClass("special");
+})
 
-    // Use getElementById() to find your output <div> and assign it to a variable outputEl (step 1)
-    var outputEl = document.getElementById("output");
-    console.log("outputEl: ", outputEl);
-    
-    // Create a new element with document.createElement("p") and assign it to a variable new1El (step 2)
-    var new1El = document.createElement("p");
-
-    // Change the html attribute of new1El to say "something new.""
-    new1El.innerHTML = "Something new.";
-    new1El.id = "new-one";
-
-    // Create a new element with document.createElement("p") and assign it to a variable new1El
-    var new2El = document.createElement("p");
-    new1El.id = "new-two";
-
-    // Change the html attribute of new1El to say "something else.""
-    new2El.innerHTML = "Something else.";
-
-    // Append both new elements one at a time using appendChild() (step 3)
-    outputEl.appendChild(new1El);
-    outputEl.appendChild(new2El);
-
-    // Change the css attributes of at least two elements of your page
-    // we do some stuff
-    // new1El.style.color = "blue";
-    // outputEl.style.border = "dashed 1px red";
-    outputEl.className = "changed";
-
- }
+// Now let's add a handler for the party toggle button
+$("#party-toggle button").click(function(){
+  // if the body element has a class of party...
+  // then change button text to "Business Time"
+  if ($("body").hasClass("party")) {
+    $("body").removeClass("party");
+    $("#party-toggle button").html("Party");
+  }
+  else {
+    $("body").addClass("party");
+    $("#party-toggle button").html("Business");
+  }
+})

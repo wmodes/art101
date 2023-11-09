@@ -1,39 +1,61 @@
 // Lab 10 - sort or scramble a name
 // Author: S Llawom Eydansele <wmodes@csumb.edu>
-// Created: February 18, someyear
+// Created: 19 September
 // License: Public Domain
 
-// Using jQuery, create buttons to add to the challenge, problems, and results sections of your document:
-// Find the section you want to add the button to
-// Create the button
-// Give it a text label
-// Add it to the section
-$(".sectionbox").append("<button class='btn btn-secondary highlight-button'>Toggle Highlight</button>");
+// shuffleArray - take an array and shuffle the contents
+// Thanks to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-// Add to your previous JavaScript file:
-// Using jQuery, do the following for each button:
-// Add a click event to each button
-// Find the challenge, problems, or results section the button is in.
-// Toggle a class special within the <div> of the section
-// Go into your css and style each of the classes
-// Test each button
-$(".highlight-button").click(function(){
-  // I can use "this" to refer to the button that got clicked
-  // here's a different maybe better way to do it
-  // (we are traversing the DOM to the parent)
-  $(this).parent().toggleClass("special");
-})
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
 
-// Now let's add a handler for the party toggle button
-$("#party-toggle button").click(function(){
-  // if the body element has a class of party...
-  // then change button text to "Business Time"
-  if ($("body").hasClass("party")) {
-    $("body").removeClass("party");
-    $("#party-toggle button").html("Party");
-  }
-  else {
-    $("body").addClass("party");
-    $("#party-toggle button").html("Business");
-  }
-})
+// sortUserName - a function that takes user input and sorts the letters
+// of their name
+function reorderUserName(word) {
+    var wordArray = word.toLowerCase().split('');
+    var newArray = shuffleArray(wordArray);
+    return newArray.join('');
+}
+
+// given a string, return string in Title Case
+// thanks to https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
+
+// find the button element
+buttonEl = document.getElementById("my-button");
+console.log("button element:", buttonEl);
+// find the form element
+inputEl = document.getElementById("user-name");
+console.log("input element:", inputEl);
+// find output element
+outputEl = document.getElementById("output");
+console.log("output element:", outputEl);
+
+// add an event listener to button
+buttonEl.addEventListener("click", function(){
+  // get value from name element
+  var userName = inputEl.value;
+  // modify value - either sort or shuffle
+  var newName = toTitleCase(reorderUserName(userName));
+  // put value in output element
+  outputEl.innerHTML = "<p id=name-results>" + newName + "</p>";
+});

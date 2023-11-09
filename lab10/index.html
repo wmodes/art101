@@ -1,45 +1,30 @@
 <html>
     <head>
-        <title>Lab 10: JavaScript Events and Forms</title>
+        <title>Lab 10: JavaScript for the Web</title>
+
         <link rel="stylesheet" type="text/css" href="../css/site.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <!-- <script type="text/javascript" src="js/lab.js" defer></script> -->
-        <script type="text/javascript" src="js/sebastian.js" defer></script>
-
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/lab.js" defer></script>
     </head>
     <body>
         <div id="content">
-            <div class="namebadge"><img src="images/hello.png"></div>
-
-            <h1>Lab 10: <span id="title">JavaScript Events and Forms</span></h1>
-
-            <p>Working with your partner, write functions that take user input.</p>
+            <h1>Lab 10: JavaScript for the Web</h1>
+            <p>Working with your partner, experiment with modifying the DOM.</p>
             <h2>Challenges</h2>
-            <p>The sorted name was easy because I already knew how to do it. Converting to an array seems a bit like a dirty trick, but okay. Shuffling the name was more of a challenge. I'd never done that before (that I remember). I definitely fooled around a good bit to get the CSS to place the name over my image. It helped to turn borders on for that elements so I could position it properly. There are still long names that break the formatting, but it's okay for now -- a balance of simple coding and interesting results.</p>
+            <p>So, for this assignment, I had to tweak things a bit due to the changes in lecture order. But overall, I think it turned out swell.</p>
+
+            <p>I created a JavaScript function called generateRandomText to whip up random text that looks like Lorem Ipsum. I played around with the min and max parameters, so now it can give us anything from short snippets to longer paragraphs.</p>
+
+            <p>Now, onto the styling part. I jazzed up the text elements using CSS. Specifically, I used the nth-child(even) selector to target every other element and applied some styles to evoke phone text dialogue.</p>
+                
             <h2>Results</h2>
-            <p>I'm happy with the output and wanted to type in all of my friends names to see the ridiculous anagrams. Here is the program execution:</p>
-            <div>
-              <input type="text" id="user-name"><br>
-              <button id="my-button">Submit</button>
-              <div id="output"></div>
-
-
-
-                <!-- <h2>Script Input</h2>
-                <p>
-                    <label>Please enter your name.<br>
-                        <input type="input" id="name-field">
-                    </label>
-                    <button id="submit-button">Submit
-                    </button>
-                </p>
-                <h2>Script Output</h2>
-                <div id="output" class="name"></div>
-                <div id="snide-comments"></div> -->
-            </div>
+            <p>So, in a nutshell, these JavaScript and CSS tweaks not only made the assignment work with the lecture changes but also added a bit of flair to the visual side of things.</p>
+            <div id="output"></div>
+            <button id="make-convo">Say Something</button>
             <div class="linkbox">
                 <a class="homelink" href="../index.html">&lt;&lt; Back home</a>
-                <a class="sourcelink" href="js/index.js" target="source">JavaScript Source &gt;&gt;</a>
+                <a class="sourcelink" href="js/lab.js" target="source">JavaScript Source &gt;&gt;</a>
             </div>
         </div>
     </body>
