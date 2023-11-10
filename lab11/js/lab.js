@@ -1,61 +1,51 @@
-// Lab 10 - sort or scramble a name
-// Author: S Llawom Eydansele <wmodes@csumb.edu>
-// Created: 19 September
-// License: Public Domain
+/*
+   lab.js - This simple JavaScript/jQuery script gets a value from an input field and outputs a modified version.
 
-// shuffleArray - take an array and shuffle the contents
-// Thanks to https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-function shuffleArray(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+   Requirements: jQuery must be loaded for this script to work.
 
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    return array;
-}
+   Author: Wes modes
+   Date: 2023
+*/
 
-// sortUserName - a function that takes user input and sorts the letters
-// of their name
-function reorderUserName(word) {
-    var wordArray = word.toLowerCase().split('');
-    var newArray = shuffleArray(wordArray);
-    return newArray.join('');
+// Generates an anagram of a given string.
+// credit to ChatGPT
+function anagram(inputString) {
+ // Convert the string to an array of characters
+ const charArray = inputString.split('');
+
+ // Use the Fisher-Yates (Knuth) shuffle algorithm to shuffle the characters
+ for (let i = charArray.length - 1; i > 0; i--) {
+   const j = Math.floor(Math.random() * (i + 1));
+   [charArray[i], charArray[j]] = [charArray[j], charArray[i]];
+ }
+
+ // Join the shuffled characters back into a string
+ const anagram = charArray.join('');
+
+ // Return the generated anagram
+ return anagram;
 }
 
 // given a string, return string in Title Case
-// thanks to https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-function toTitleCase(str) {
-    return str.replace(
-        /\w\S*/g,
-        function(txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        }
-    );
+// credit to ChatGPT
+String.prototype.toTitleCase = function() {
+  return this.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+};
+
+// Sorts the characters of a string in alphabetical order.
+function sortString(inputString) {
+    // We have to convert our string to an array and back again to sort it
+    return inputString.split('').sort().join('');
 }
 
-// find the button element
-buttonEl = document.getElementById("my-button");
-console.log("button element:", buttonEl);
-// find the form element
-inputEl = document.getElementById("user-name");
-console.log("input element:", inputEl);
-// find output element
-outputEl = document.getElementById("output");
-console.log("output element:", outputEl);
-
-// add an event listener to button
-buttonEl.addEventListener("click", function(){
-  // get value from name element
-  var userName = inputEl.value;
-  // modify value - either sort or shuffle
-  var newName = toTitleCase(reorderUserName(userName));
-  // put value in output element
-  outputEl.innerHTML = "<p id=name-results>" + newName + "</p>";
+// click listener for button
+$("#submit").click(function(){
+    // get value of input field
+    const userName = $("#user-name").val();
+    // now let's sort it
+    newName = anagram(userName).toTitleCase();
+    // append a new div to our output div
+    $("#output").html('<div class="name-results">' + newName + '</div>');
 });

@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 
+#content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+#content .text-part {
+  flex: 1;
+}
+
+#content .image-part {
+  flex: 1;
+  padding-top: 30px;
+}
 
 .code-link {
     text-align: right;
@@ -6,7 +21,6 @@
 }
 
 .namebadge {
-    float: right;
     width: 500px;
 }
 .namebadge img {
@@ -14,17 +28,20 @@
     height: auto;
 }
 
-#name-results {
-    position: absolute;
-    top: 210px;
-    right: 80px;
-    width: 450px;
-    /*border: solid 1px black;*/
-    word-wrap: break-word;
-    font-size: 350%;
-    line-height: 90%;
-    font-weight: bold;
-    font-family: "Times New Roman", serif;
-    text-align: center;
-    margin: 20px;
+#output {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -220px;
+  height: 200px;
+  max-width: 460px;
+  margin-left: 20px;
+  word-wrap: break-word;
+  font-size: 80px;
+  line-height: 90%;
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+  font-family: 'Kalam', cursive;
 }
