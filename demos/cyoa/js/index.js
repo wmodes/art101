@@ -113,7 +113,7 @@ rooms = {
     bookstore: {
         name: "Baytree Bookstore",
         description: "This is the campus bookstore. Just entering here you have a flash of PTSD from the $280 you spent on this quarter's books, none of which you have even cracked open. You are tempted to buy more school supplies, but you know you are just dawdling because you don't really want to get to class. You are going to be late if you don't hurry.",
-        exitKeys: [plaza],
+        exitKeys: ['plaza'],
         exitTexts: ["Get out of here before you rack up more student loans."],
         image: "bookstore.png"
     },

@@ -37,3 +37,7 @@ $("#party-toggle button").click(function(){
     $("#party-toggle button").html("Business");
   }
 })
+
+$("#make-hide").click(function(){
+  $("#instructions").toggleClass("hidden");
+})  
