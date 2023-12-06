@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../../css/site.css">
+    <link rel="stylesheet" href="css/demo.css"> 
+    <title>JS Bin</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="js/demo.js"></script>
+</head>
+<body>
+    <main id="content">
+
+        <h1>Haunted Hospital - Hide/Show Demo</h1>
+
+        <p>jQuery and CSS can be used together to hide and unhide sections of a document dynamically. jQuery is a JavaScript library that simplifies and enhances the process of manipulating HTML elements. CSS, on the other hand, is a styling language that defines the appearance of elements on a web page. By combining these two technologies, developers can create interactive and responsive websites.</p>
+
+        <p>To hide and unhide sections of a document using jQuery and CSS, you can utilize the hide() and show() functions provided by jQuery along with CSS classes. First, assign a unique class or ID to the section you want to hide or unhide. Then, in your JavaScript code, use jQuery to select the desired element using the class or ID and call the hide() or show() function accordingly. These functions modify the CSS display property of the element, making it invisible or visible. To enhance the user experience, you can also add animations or transitions to the hiding and unhiding process using jQuery or CSS transitions.</p>
+
+        <p>Look at the HTML. The key here is that all of the elements you are showing and hiding are all already there.</p>
+
+        <div id="game">
+        
+            <div id="er-lobby" class="room">
+                <h1>ER Lobby</h1>
+                <p>Your memories are fuzzy. You are unclear how you got here. A haunting hush blankets the once bustling reception area. Broken glass crunches beneath your feet as eerie silence envelops the abandoned desks. Flickering lights cast elongated shadows across the lifeless space, highlighting forgotten wheelchairs and overturned gurneys. Abandoned patient files flutter like spectral whispers amidst desolate echoes of hurried footsteps.</p>
+            </div>
+
+            <div id="hallway1" class="room">
+                <h1>Hallway</h1>
+                <p>Flickering lights barely illuminate this long, narrow corridor. Doors line both sides, leading to other realms within this enigmatic place.</p>
+            </div>
+            
+            <div id="child-ward" class="room">
+                <h1>Children's Ward</h1>
+                <p>Toys lie scattered, their once vibrant colors faded with time. The laughter of playful spirits echoes off the walls, mingled with the whispers of young voices long gone.</p>
+            </div>
+            
+            <div id="nursery" class="room">
+                <h1>Nursery</h1>
+                <p>The scent of rotten milk mingles with the remnants of lullabies in this desolate nursery. Abandoned cribs sway eerily in an otherworldly draft, a silent echo of innocence lost.</p>
+            </div>
+
+            <div id="waiting-area" class="room">
+                <h1>Waiting Area</h1>
+                <p>Unoccupied chairs are arranged in tidy rows, surrounded by faded magazines and forgotten personal effects. The sense of anticipation hangs heavy in the air.</p>
+            </div>
+            
+            <div id="or" class="room">
+                <h1>Operating Room</h1>
+                <p>The pungent odor of antiseptic lingers in the air as surgical tools glint ominously under flickering lights. Tables stand empty, draped in faded, blood-stained sheets.</p>
+            </div>
+
+            <div id="staircase" class="room">
+                <h1>Staircase</h1>
+                <p>An ancient staircase descends into darkness, its steps creaking with every tentative footfall.</p>
+            </div>
+            
+            <div id="psych-ward" class="room">
+                <h1>Psychiatric Ward</h1>
+                <p>Straitjackets hang forlornly, their clasps rattling like the echoes of tormented cries that once filled the air. Ghostly whispers linger, telling tales of lost minds and forgotten souls.</p>
+            </div>
+
+            <div id="hallway2" class="room">
+                <h1>Hallway</h1>
+                <p>This corridor seems to stretch endlessly, its walls adorned with peeling paint and flickering lights casting surreal shadows.</p>
+            </div>
+            
+            <div id="morgue" class="room">
+                <h1>Morgue</h1>
+                <p>Shadows dance menacingly amid cold, metal tables stained with the essence of the deceased. Rusty tools lie forgotten, their purpose macabre in the dim, ghostly aura. Yu realize with a shock that this is where you started before you began to haunt this place.</p>
+            </div>
+        </div>  
+        
+    </main>
+</body>
+</html>
