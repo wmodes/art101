@@ -1,0 +1,33 @@
+
+body {
+	background-color: magenta;
+	padding: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#content {
+	outline: dotted 30px red;
+	outline-offset: -50px;
+	padding: 70px;
+	background-color: yellow;
+}
+
+#content p {
+	text-indent: 0.25in;
+}
+
+img.bio-photo {
+	width: 300px;
+	height: auto;
+	float: right;
+	padding: 20px;
+}
+
+#photo1 {
+    filter: invert(1);
+}
+
+.photo {
+	max-width: 250px;
+}

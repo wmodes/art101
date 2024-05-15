@@ -1,0 +1,21 @@
+<html> 
+    <head> 
+        <title>Flocking Boids</title> 
+        <script type="text/javascript" src="http://archive.breefield.com/lab/flock/js/draw.js" defer></script> 
+		<script type="text/javascript" src="http://archive.breefield.com/lab/flock/js/threat.js" defer></script> 
+		<script type="text/javascript" src="http://archive.breefield.com/lab/flock/js/script.js" defer></script> 
+    </head> 
+    <body style="background-color: black;color: #aaa;"> 
+        <div id="container">
+            <div id="corner">
+                <h1>Flocking Boids</h1>
+                <div id="promote">
+                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                    <br/> 
+                </div>
+            </div>
+            <canvas id="playground" width="500" height="500"></canvas>
+        </div>
+    </body> 
+
+</html>

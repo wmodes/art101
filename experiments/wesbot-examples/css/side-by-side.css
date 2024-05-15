@@ -1,0 +1,68 @@
+/* side-by-side.css - Student assignment for Flexbox layout */
+
+/* just for testing */
+/* div {
+  border: 1px solid #000;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.text-box {
+  width: 50%;
+  min-width: 50%;
+  margin: 10px;
+  padding: 20px;
+}
+
+.image {
+  width: 50%;
+  min-width: 50%;
+  margin: 10px;
+  padding: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+} */
+
+
+/* side-by-side.css - Student assignment for Flexbox layout */
+
+/* just for testing */
+div {
+  border: 1px solid #000;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.text-box {
+  flex: 1; /* Use flex property to make items equal width and fill the container */
+  min-width: 300px; /* Set a minimum width to allow stacking on narrow devices */
+  margin: 10px;
+  padding: 20px;
+}
+
+.image {
+  flex: 1; /* Use flex property to make items equal width and fill the container */
+  min-width: 300px; /* Set a minimum width to allow stacking on narrow devices */
+  margin: 10px;
+  padding: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+

@@ -1,0 +1,17 @@
+
+#headshot {
+	max-width: 500px;
+	width: 500px;
+}
+
+img {
+	max-width: 100%;
+}
+
+#headshot.special img {
+	width: 400px;
+}
+
+#headshot.special {
+	float: right;
+}

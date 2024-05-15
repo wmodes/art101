@@ -1,0 +1,19 @@
+
+/* Other css directives are in sitewide css */
+
+#right-img {
+    float: right;
+    width: 300px;
+    height: auto;
+    border: solid 1px black;
+}
+
+.code {
+  /* background is the hex value for dark gray */
+  background-color: #404040;
+  color: white;
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  padding: 10px;
+  display: inline-block;
+  padding-right: 50px;
+}

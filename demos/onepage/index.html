@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>One Page Demo</title>
+        <link rel="stylesheet" type="text/css" href="../../css/site.css">
+        <link rel="stylesheet" type="text/css" href="css/onepage.css">
+        <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous"></script>
+        <script src="js/onepage.js" DEFER></script>
+    </head>
+    <body>
+        <main id="content">
+            <section>
+                <h1>One Page Demo</h1>
+                <p>jQuery and CSS can be used together to hide and unhide sections of a document dynamically. jQuery is a JavaScript library that simplifies and enhances the process of manipulating HTML elements. CSS, on the other hand, is a styling language that defines the appearance of elements on a web page. By combining these two technologies, developers can create interactive and responsive websites.</p>
+
+                <p>To hide and unhide sections of a document using jQuery and CSS, you can utilize the hide() and show() functions provided by jQuery along with CSS classes. First, assign a unique class or ID to the section you want to hide or unhide. Then, in your JavaScript code, use jQuery to select the desired element using the class or ID and call the <code>hide()</code> or <code>show()</code> function accordingly. These functions modify the CSS display property of the element, making it invisible or visible. To enhance the user experience, you can also add animations or transitions to the hiding and unhiding process using jQuery or CSS transitions.</p>
+            </section>
+            <section id="simplehide">
+                <h1>Simple Example</h1>
+                <p>Let's try a simple example. Click the button below to hide the section. </p>
+                <div>
+                    <button id="showSimpleBtn">Show Section</button>
+                    <button id="hideSimpleBtn">Hide Section</button>
+                </div>
+                <p>See, there is a section hiding below this line.&#x2935;</p>
+                <hr>
+                <div id="simpleDiv" class="hidden">
+                    <h2>Hidden Section</h2>
+                    <p>This is the hidden section.</p>
+                </div>
+                <hr>
+            </section>
+            <section>
+                <h2>Multiple Hiden Windows</h2>
+                <p>With jQuery's <code>hide()</code> and <code>show()</code> functions, you can easily create complex tabbed interfaces and multi-page layouts within a single web page, offering a seamless and responsive user experience. By defining different sections or divs for each tab or page and initially hiding all but the first section, you can dynamically hide and show sections based on user interactions, such as clicking on tabs or buttons. This approach allows users to navigate through content without page reloads, giving the illusion of separate pages or tabs within a single page. By combining jQuery's functions with CSS styles and event handling, you can create interactive and organized user interfaces, improving load times and simplifying navigation.</p>
+            </section>
+            <section class="tabbed-section">
+                <ul class="tab-list">
+                  <li class="tab active" data-tab="tab1">Tab 1</li>
+                  <li class="tab" data-tab="tab2">Tab 2</li>
+                  <li class="tab" data-tab="tab3">Tab 3</li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane active" data-tab-content="tab1">
+                    <div class="kitten-floater">
+                        <img src="http://placekitten.com/100/100" alt="Kitten">
+                    </div>
+                    <h3>Tab 1 Content</h3>
+                    <p>Kittens are born blind and deaf: Newborn kittens enter the world with their eyes and ears closed. It takes about 1-2 weeks for their eyes to open fully, and their hearing gradually develops during the same period.</p>
+                  </div>
+                  <div class="tab-pane" data-tab-content="tab2">
+                    <div class="kitten-floater">
+                        <img src="http://placekitten.com/101/100" alt="Kitten">
+                    </div>
+                    <h3>Tab 2 Content</h3>
+                    <p>Kittens have tiny, sharp baby teeth: Just like human babies, kittens also go through teething. Around 2-4 weeks of age, their baby teeth start to emerge. These sharp teeth help them explore their world and eventually fall out to make room for their adult teeth.</p>
+                  </div>
+                  <div class="tab-pane" data-tab-content="tab3">
+                    <div class="kitten-floater">
+                        <img src="http://placekitten.com/102/100" alt="Kitten">
+                    </div>
+                    <h3>Tab 3 Content</h3>
+                    <p>Kittens are incredibly playful: Kittens have an innate curiosity and boundless energy. They love to play, pounce, and chase after toys or even their own tails. Playtime not only helps them develop coordination and motor skills but also provides mental stimulation and strengthens the bond with their human companions.</p>
+                  </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

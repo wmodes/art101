@@ -1,0 +1,10 @@
+main img {
+  width: inherit !important;
+  max-width: 100%;
+}
+
+#output {
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css"><script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src="js/index.js" DEFER></script>
+    <title>Welcome to Wes</title>
+  </head>
+  <body>
+    <main id="content"> 
+      <div class="major-section">
+        <h1>Choose Your Own Adventure</h1>
+
+        <p>Explore different paths, make choices, and see where the adventure takes you!</p>
+
+        <div class="container">
+          <div class="adventure-section">
+              <div id="js-output"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="major-section">
+
+        <h2>Design</h2>
+
+        <p>I wanted to create a choose-your-own-adventure where all of the data about the locations
+        and the movement for the game were all contained in the data, not in the program structure. 
+        If you <a target="_blank" href="js/index.js">look at the code</a>, you can see how little code there is. There are about 15 lines of actual code, and all of the information about the game, all of the movement, and so on, is included in a single data object.</p>
+
+        <h2>Challenges</h2>
+
+        <p>I couldn't remember at first how to store data in a JavaScript when it was being triggered by elements on a webpage. Then I remembered that actually, as long as you do not reload the page, global variables keep their value. That is how I kept track of "currentRoom."</p>
+
+        <h2>Solution</h2>
+
+        <p>This choose-your-own-adventure game takes a unique approach by storing all the data about the locations and movement in a single data object. The game design prioritizes simplicity and ease of maintenance, with only about 15 lines of actual code.</p>
+
+        <p>Instead of embedding the game logic within the program structure, the data object contains all the information about the game, including descriptions of locations, available exits, and more. This approach allows for easy updates and modifications to the game content without changing the underlying code.</p>
+
+        <pre><code>
+          rooms = {
+            cu1: {
+                name: "Classroom Unit One",
+                description: "This is a large lecture room that holds maybe a couple hundred people. \
+                    Half of the seats are filled by laconic students who are all looking at their phones and \
+                    laptops. The lecturer hasn't arrived yet, so maybe you are still early for class. Perhaps \
+                    there is still time to get a cup of coffee at the cafe. You'll need that too, if you want \
+                    to survive your Astronomy 101 lecture.",
+                exitKeys: ['foyer', 'forest1'],
+                exitTexts: ["Go out the front of the lecture hall",
+                    "Slip out the back door."],
+            }
+        </code></pre>
+
+        <p>One of the key advantages of this design is how easy it is to extend the game with additional elements like images or sounds. By simply modifying the data object, you can incorporate visual or auditory elements into the gameplay, enhancing the overall experience for the players.</p>
+
+      </div>
+      <div class="linkbox">
+        <a class="homelink" href="../index.html">&lt;&lt; Back</a><a class="sourcelink" href="js/index.js" target="source">JavaScript Source &gt;&gt;</a>
+      </div>
+
+    </main>  
+
+  </body>
+</html>
+

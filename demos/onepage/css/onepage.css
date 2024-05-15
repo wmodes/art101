@@ -1,0 +1,45 @@
+
+
+.hidden {
+    display: none;
+}
+
+.tabbed-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+.tab-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #ccc;
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+    min-height: 100px;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.kitten-floater {
+    float: right;
+}

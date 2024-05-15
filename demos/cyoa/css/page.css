@@ -1,0 +1,79 @@
+/* Page CSS 
+ * 
+ * I was tired of copying my CSS file each week, so I put all the general CSS
+ * stuff in one file and called it site.css and put it in my home directory. 
+ * In this file, I have any specific styling for a homework assignment in this 
+ * file, page.css in my homework directory.
+ * 
+ * You'll notice that we can include more than one css file at the top of an html
+ * file:
+ *
+ *  <link rel="stylesheet" type="text/css" href="../site.css">
+ *  <link rel="stylesheet" type="text/css" href="page.css">
+ */
+
+/* Specific CSS formatting for this page */
+
+.room-image img {
+    width: 100%;
+    height: auto;
+}
+
+.adventure-section {
+    min-height: 300px;
+    color: maroon;
+    border: solid 1px #333333;
+    padding: 20px 20px 30px 20px;
+    margin: 10px;   
+    background-color: #fffdf3;  
+    width: 80%;
+    max-width: 100%;
+}
+
+.room-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-image img {
+    width: 80%;
+    border: solid 1px #333333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+    .adventure-section {
+      width: 100%;
+      min-width: auto;
+      margin: 10px 0 10px 0;
+    }
+
+    .room-image img {
+        width: 100%;
+    }
+}   
+
+#js-output .title {
+    font-weight: bold;
+}
+
+#js-output li {
+    text-transform: none;
+    font-weight: bold;
+    cursor: pointer; 
+    cursor: hand;
+    list-style: none;
+    padding: 0px;
+}
+
+#js-output li:before {
+  content: "\21E8 ";
+  margin: 0 1em;
+}
+
+
