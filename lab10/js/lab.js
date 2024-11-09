@@ -12,19 +12,16 @@ function generateRandomText() {
   const min = 3;
   const max = 100;
   const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
-
   // Get a random starting index and adjust to nearest whitespace boundary
   let randStart = Math.floor(Math.random() * (text.length - randLen + 1));
   while (randStart > 0 && text[randStart - 1] !== ' ') {
     randStart--;
   }
-
   // Set the end index and adjust to nearest whitespace boundary
   let endIdx = randStart + randLen;
   while (endIdx < text.length && text[endIdx] !== ' ') {
     endIdx++;
   }
-
   // Generate the random text, breaking at the nearest whitespace boundaries
   return text.slice(randStart, endIdx).trim();
 }
