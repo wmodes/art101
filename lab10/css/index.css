@@ -1,10 +1,40 @@
-#output {
+
+#convo {
   background-color: white;
   margin: 10px auto;
-  padding: 10px;
+  padding: 0px;
   border-radius: 15px;
   border: solid 1px black;
+  max-width: 450px;
+  text-align: right;
+  overflow: hidden;
+}
+
+#convo-header {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #f8f8f8;
+  padding: 5px;
+}
+
+.convo-thumb img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.convo-name {
+  font-size: 15px;
+  color: #404040;
+}
+
+#convo button {
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+
+#output {
   min-height: 100px;
+  padding: 10px;
 }
 
 .text p {
@@ -17,6 +47,7 @@
   color: white;
   font-family: sans-serif;
   font-size: 0.8em;
+  text-align: left;
 }
 
 .text:nth-child(odd) {

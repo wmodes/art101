@@ -33,3 +33,10 @@
     text-align: center;
     margin: 20px;
 }
+
+.special {
+    background-color: lavender;
+    border: dotted 50px red;
+    color: pink;
+    font-weight: bold;
+}
