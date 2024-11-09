@@ -1,0 +1,51 @@
+
+
+
+
+
+<div id="map-wrapper">
+    <div id="map-bacckgound"><img src="map-background.png" /></div>
+    <div id="pin-map">
+        <svg>
+            <g></g>
+        </svg>
+    </div>
+</div>
+
+
+$('#postButton').on('click', function() {
+    if ($('#postText').is(':visible')) {
+        $('#postText').slideUp('slow');
+    } else {
+        $(".hidey-bit").slideUp('slow'); // Hide all sections with animation
+        $('#postText').slideDown('slow');
+    }
+});
+
+<style>
+    #map-wrapper {
+        width: 500px;
+        height: 500px;
+    }
+
+    #map-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #pin-map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #pin-map svg {
+        width: 100%;
+        height: 100%;
+    }
+</style>

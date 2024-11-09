@@ -8,15 +8,27 @@
 */
 
 function generateRandomText() {
-  const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  const text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.";
   const min = 3;
-  const max = 200;
+  const max = 100;
   const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
-  // Get a random starting index to slice the Lorem Ipsum text
-  const randStart = Math.floor(Math.random() * (text.length - randLen + 1));
-  // Generate the random Lorem Ipsum-like text
-  return text.slice(randStart, randStart + randLen);
+
+  // Get a random starting index and adjust to nearest whitespace boundary
+  let randStart = Math.floor(Math.random() * (text.length - randLen + 1));
+  while (randStart > 0 && text[randStart - 1] !== ' ') {
+    randStart--;
+  }
+
+  // Set the end index and adjust to nearest whitespace boundary
+  let endIdx = randStart + randLen;
+  while (endIdx < text.length && text[endIdx] !== ' ') {
+    endIdx++;
+  }
+
+  // Generate the random text, breaking at the nearest whitespace boundaries
+  return text.slice(randStart, endIdx).trim();
 }
+
 
 // click listener for button
 $("#make-convo").click(function(){
