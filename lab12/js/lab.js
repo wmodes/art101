@@ -54,9 +54,9 @@ introHTML = '<div class="stage-direction">The Sorting Hat sings his song:</div>'
 
 // Return Gryffindor, Ravenclaw, Slytherin, and Hufflepuff
 // depending on length mod 4
-function sortingHatLength(str) {
-  len = str.length;
-  mod = len % 4;
+function sortingHat(str) {
+  let len = str.length;
+  let mod = len % 4;
   if (mod == 0) {
     return "Gryffindor"
   }
@@ -71,10 +71,23 @@ function sortingHatLength(str) {
   }
 }
 
+  // // attach click handler to submit button
+  // $("#button").click(function(){
+  //   console.log("Button clicked");
+  //   // get the value in the #input text box, asign to a varaiable name
+  //   let name = $("#input").val()
+  //   crossOriginIsolated.log("Name: " + name);
+  //   // get the house
+  //   let house = sortingHat(name);
+  //   console.log("House: " + house);
+  //   // add house to output div
+  //   $("#output").html("<h1>" + house + "</h1>");
+  // }
+
 // take a string and return a hashed checksum of the string
 // from https://stackoverflow.com/questions/26057572/
 function checksum(s) {
-  var hash = 0, strlen = s.length, i, c;
+  let hash = 0, strlen = s.length, i, c;
   if ( strlen === 0 ) {
     return hash;
   }
@@ -98,7 +111,7 @@ function addClass(ele,cls) {
 //
 function removeClass(ele,cls) {
   if (hasClass(ele,cls)) {
-    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    let reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
     ele.className=ele.className.replace(reg,' ');
   }
 }
@@ -111,60 +124,58 @@ function sortingHatHash(str) {
   return housesArray[mod];      // returns an object from the array
 }
 
-var myButton = document.getElementById("button");
+let myButton = document.getElementById("button");
 myButton.addEventListener("click", function() {
   // get value from input field
-  var name = document.getElementById("input").value;
+  let name = document.getElementById("input").value;
   // use name to get house from SortingHat function
-  var houseObj = sortingHatHash(name);
+  let houseObj = sortingHatHash(name);
   // output to output div (adding some text and HTML around the results)
   newText = "<h2>" + houseObj.title + "!</h2>" +
           introHTML +
           "<p>\"" + houseObj.text + "\"</p>" +
           creditHTML;
-  var outputArea = document.getElementById("output");
+  let outputArea = document.getElementById("output");
   outputArea.innerHTML = newText;
   removeClass(outputArea, "hidden");
   removeClass(document.getElementById("tail-box"), "hidden");
 })
 
-var myInput = document.getElementById("input");
+let myInput = document.getElementById("input");
 myInput.addEventListener("focus", function() {
   addClass(document.getElementById("output"), "hidden");
   addClass(document.getElementById("tail-box"), "hidden");
 });
 
-// given a number, return a Hogwart's houses
-//
-// function getHouse(num){
-//   // get the remainer divided by 4 of the length
-//   var remainder = num % 4;
-//   // create an if else to show house
+// // given a number, return a Hogwart's houses
+// //
+// function getHouse(num) {
+//   // Get the remainder when divided by 4
+//   let remainder = num % 4;
+//   let str = "";
+//   // Assign Tolkien houses with descriptions based on the remainder
 //   if (remainder == 0) {
-//     var str = "Gryffindor";
+//     str = "House of Elrond: Known for wisdom, leadership, and the sanctuary of Rivendell.";
 //   } else if (remainder == 1) {
-//     var str = "Ravenclaw";
+//     str = "House of Durin: A lineage of strength, endurance, and the heart of dwarven lore.";
 //   } else if (remainder == 2) {
-//     var str = "Hufflepuff";
+//     str = "House of Beren: Celebrated for courage, perseverance, and an unyielding love for Lúthien.";
 //   } else if (remainder == 3) {
-//     var str = "Slytherin";
+//     str = "House of Fëanor: A house of ambition, brilliance, and the creator of the Silmarils.";
 //   }
 //   return str;
 // }
-//
-//
-// THIS IS THE ONE WE DID IN CLASS
-//
+
 // // attach click handler to submit button
 // $("#button").click(function(){
 //   // get the value in the #input text box, asign to a varaiable name
-//   var name = $("#input").val()
+//   let name = $("#input").val()
 //   console.log(name);
 //   // get the length of the name
-//   var nameLength = name.length;
+//   let nameLength = name.length;
 //   console.log(nameLength);
 //   // get the house
-//   var house = getHouse(nameLength);
+//   let house = getHouse(nameLength);
 //   console.log(house);
 //   // add house to output div
 //   $("#output").html("<h1>" + house + "</h1>");
