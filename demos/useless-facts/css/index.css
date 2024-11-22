@@ -1,0 +1,18 @@
+body {
+  margin: 50px 100px;
+}
+
+#buttonbar {
+  background-color: white;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  /* border: solid 1px red; */
+  width: 100%;
+  text-align: center;
+}
+
+.biggie {
+  font-size: 100px;
+  text-align: center;
+}

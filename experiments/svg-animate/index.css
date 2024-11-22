@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+
+#svg-container {
+  margin: 0 auto;
+}
+
+#Only_a_test {
+  animation: neon 2s ease infinite;
+}
+
+@keyframes neon {
+  /* split on and off blink (45:20 ratio) with a little fade out */
+  0%, 45% {
+    opacity: 100%;
+  }
+  70%,90% {
+    opacity: 33%;
+  }
+  /* brief blink after turning on */
+  5%,15% {
+    opacity: 100%;
+  }
+  10% {
+    opacity: 80%;
+  }
+}

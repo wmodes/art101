@@ -1,0 +1,15 @@
+#display-area {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#input-field {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#change-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
