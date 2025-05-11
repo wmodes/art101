@@ -58,7 +58,7 @@ function randomizeName(userName) {
 }
 
 function main() {
-    var userName = window.prompt("Hi. Please tell me your name so I can fix it.");
+    var userName = window.promp("Hi. Please tell me your name so I can fix it.");
     document.writeln("<style>:root {--textlen: " + userName.length + ";}</style>");
     var sortedName = sortUserName(userName);
     document.writeln("Here's your sorted name: " + sortedName + "</br></br>");

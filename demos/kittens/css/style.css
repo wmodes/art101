@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow: hidden;
+}
+
+#content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.kitten {
+  position: absolute;
+  text-align: center;
+}
+
+.kitten img {
+  width: auto;
+  height: auto;
+}
+
+.kitten button {
+  margin-top: -10px;
+  display: block;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.kitten button.pressed {
+  transform: scale(0.95);
+  background-color: #ddd;
+}
